@@ -1,0 +1,65 @@
+{
+    "identifier": "com.gingerbeardman.Bookmarks",
+    "name": "Bookmarks",
+    "organization": "gingerbeardman",
+    "description": "Bookmark files and folders in the Sidebar.",
+    "version": "1.0.0",
+    "categories": ["sidebars"],
+    
+    "main": "main.js",
+    
+    "activationEvents": [
+        "onLanguage:javascript"
+    ],
+    
+    "entitlements": {
+        "filesystem": "readonly",
+    },
+    
+    "sidebars": [
+        {
+            "id": "com.gingerbeardman.Bookmark.sidebar",
+            "name": "Markers",
+            "smallImage": "sidebar-small",
+            "smallSelectedImage": "sidebar-small-selected",
+            "largeImage": "sidebar-large",
+            "largeSelectedImage": "sidebar-large-selected",
+            "sections": [
+                {
+                    "id": "com.gingerbeardman.Bookmark.sidebar",
+                    "name": "Markers",
+                    "allowMultiple": true,
+                    "placeholderText": "No bookmarks have been created.",
+                    "placeholderImage": "sidebar-placeholder",
+                    "headerCommands": [
+                        {
+                            "title": "Add",
+                            "image": "__builtin.add",
+                            "tooltip": "Add a new bookmark",
+                            "command": "com.gingerbeardman.Bookmark.add"
+                        },
+                        {
+                            "title": "Remove",
+                            "image": "__builtin.remove",
+                            "tooltip": "Remove the selected bookmarks",
+                            "command": "com.gingerbeardman.Bookmark.remove",
+                            "when": "viewItem != null"
+                        }
+                    ],
+                    "contextCommands": [
+                        {
+                            "title": "Remove",
+                            "command": "com.gingerbeardman.Bookmark.remove",
+                            "when": "viewItem != null"
+                        },
+                        {
+                            "title": "Show in Finder",
+                            "command": "com.gingerbeardman.Bookmark.showInFinder",
+                            "when": "viewItem != null"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
