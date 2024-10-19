@@ -19,7 +19,7 @@
     "sidebars": [
         {
             "id": "com.gingerbeardman.Bookmark.sidebar",
-            "name": "Markers",
+            "name": "Book marks",
             "smallImage": "sidebar-small",
             "smallSelectedImage": "sidebar-small-selected",
             "largeImage": "sidebar-large",
@@ -27,7 +27,7 @@
             "sections": [
                 {
                     "id": "com.gingerbeardman.Bookmark.sidebar",
-                    "name": "Markers",
+                    "name": "Bookmarks",
                     "allowMultiple": true,
                     "placeholderText": "No bookmarks have been created.",
                     "placeholderImage": "sidebar-placeholder",
