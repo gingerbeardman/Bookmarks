@@ -92,11 +92,11 @@ exports.activate = function() {
                 }
             } else {
                 console.log("No path found for current document");
-                nova.workspace.showInformativeMessage("Cannot bookmark: No file is currently open.");
+                // nova.workspace.showInformativeMessage("Cannot bookmark: No file is currently open.");
             }
         } else {
             console.log("No active text editor");
-            nova.workspace.showInformativeMessage("Cannot bookmark: No file is currently open.");
+            // nova.workspace.showInformativeMessage("Cannot bookmark: No file is currently open.");
         }
     });
 
@@ -112,7 +112,25 @@ exports.activate = function() {
             bookmarksView.reload();
         } else {
             console.log("No items selected for removal");
-            nova.workspace.showInformativeMessage("Please select a bookmark to remove.");
+            // nova.workspace.showInformativeMessage("Please select a bookmark to remove.");
+        }
+    });
+
+    nova.commands.register("com.gingerbeardman.Bookmark.removeByFilename", (workspace) => {
+        console.log("Remove bookmark by filename command triggered");
+        let editor = nova.workspace.activeTextEditor;
+        if (editor) {
+            let path = editor.document.path;
+            if (path) {
+                BookmarksDataProvider.removeBookmark(path);
+                bookmarksView.reload();
+            } else {
+                console.log("No path found for current document");
+                nova.workspace.showInformativeMessage("Cannot remove bookmark: No file is currently open.");
+            }
+        } else {
+            console.log("No active text editor");
+            nova.workspace.showInformativeMessage("Cannot remove bookmark: No file is currently open.");
         }
     });
 
@@ -130,7 +148,7 @@ exports.activate = function() {
             }
         } else {
             console.log("No item selected to open");
-            nova.workspace.showInformativeMessage("Please select a bookmark to open.");
+            // nova.workspace.showInformativeMessage("Please select a bookmark to open.");
         }
     });
 
@@ -167,7 +185,7 @@ exports.activate = function() {
             }
         } else {
             console.log("No item selected to show in Finder");
-            nova.workspace.showInformativeMessage("Please select a bookmark to reveal in Finder.");
+            // nova.workspace.showInformativeMessage("Please select a bookmark to reveal in Finder.");
         }
     });
 

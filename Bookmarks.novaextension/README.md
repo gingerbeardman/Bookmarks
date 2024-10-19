@@ -14,12 +14,13 @@ For more frequent access you can drag the **Bookmarks** icon to:
 - the **Sidebar Dock** for toggling between sidebars
 - to a window edge to have a split sidebar
 
-
 ## Adding/Removing
 
 Use the `+` and `-` icons in the sidebar to add/remove file bookmarks.
 
-Right click on a bookmark to bring up a context menu with the following options:
+There are also two commands to add/remove the current file.
+
+FInally, you can right click on a bookmark to bring up a context menu with the following options:
 
 - Remove
 - Show in Finder

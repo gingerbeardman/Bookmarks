@@ -7,7 +7,7 @@
     "name": "Bookmarks",
     "organization": "gingerbeardman",
     "repository": "https://github.com/gingerbeardman/Bookmarks",
-    "version": "1.0.1",
+    "version": "1.1.0",
 
     "categories": ["sidebars"],
     
@@ -67,5 +67,20 @@
                 }
             ]
         }
-    ]
+    ],
+    
+    "commands": {
+        "editor": [
+            {
+                "title": "Add Bookmark",
+                "command": "com.gingerbeardman.Bookmark.add",
+                "shortcut": "cmd-shift-b"
+            },
+            {
+                "title": "Remove Bookmark",
+                "command": "com.gingerbeardman.Bookmark.removeByFilename",
+                "shortcut": "cmd-shift-alt-b"
+            }
+        ]
+    }
 }
