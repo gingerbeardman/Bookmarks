@@ -1,5 +1,3 @@
-// main.js
-
 class BookmarksDataProvider {
     static bookmarks = [];
 
