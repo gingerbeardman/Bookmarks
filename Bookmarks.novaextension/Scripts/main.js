@@ -141,9 +141,28 @@ exports.activate = function() {
         let selectedItems = bookmarksView.selection;
         if (selectedItems && selectedItems.length > 0) {
             let path = selectedItems[0];
-            console.log("Revealing in Finder:", path);
+            console.log("Attempting to reveal in Finder:", path);
             try {
-                nova.fs.reveal(path);
+                // Check if the path exists
+                if (nova.fs.access(path, nova.fs.F_OK)) {
+                    // Use the 'open' command to reveal in Finder
+                    let process = new Process("/usr/bin/open", {
+                        args: ["-R", path]
+                    });
+                    
+                    process.onDidExit((status) => {
+                        if (status === 0) {
+                            console.log("Successfully revealed in Finder:", path);
+                        } else {
+                            console.error("Failed to reveal in Finder. Exit status:", status);
+                            nova.workspace.showErrorMessage("Failed to reveal in Finder. Please check the path.");
+                        }
+                    });
+                    
+                    process.start();
+                } else {
+                    throw new Error("Path does not exist");
+                }
             } catch (error) {
                 console.error("Error revealing in Finder:", error);
                 nova.workspace.showErrorMessage("Failed to reveal in Finder: " + error.message);
