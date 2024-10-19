@@ -1,34 +1,34 @@
 {
+  "bottomColor" : {
+    "red" : 0.6117647059,
+    "green" : 0.1529411765,
+    "blue" : 0.6901960784,
+    "alpha" : 1
+  },
+  "iconScale" : 0.6779560368342596,
   "iconOffset" : [
     0,
     0
   ],
-  "symbolColor" : {
-    "green" : 0.9999999403953552,
-    "red" : 0.9999999403953552,
+  "shadowHeight" : 0.3,
+  "id" : "24670896-9CE6-40DD-86CB-111B3E0DEB8D",
+  "topColor" : {
+    "green" : 0.262745098,
+    "blue" : 0.2117647059,
     "alpha" : 1,
-    "blue" : 0.9999999403953552
+    "red" : 0.9568627451
   },
   "version" : 1,
-  "topColor" : {
-    "blue" : 0.2235294118,
-    "alpha" : 1,
-    "green" : 0.862745098,
-    "red" : 0.8039215686
+  "symbolColor" : {
+    "red" : 0.9999999403953552,
+    "green" : 0.9999999403953552,
+    "blue" : 0.9999999403953552,
+    "alpha" : 1
   },
-  "iconScale" : 0.6779560368342596,
   "symbol" : {
     "name" : "bookmarks",
-    "family" : "material-icons",
-    "variant" : "sharp"
+    "variant" : "sharp",
+    "family" : "material-icons"
   },
-  "bottomColor" : {
-    "green" : 0.6862745098,
-    "blue" : 0.3137254902,
-    "alpha" : 1,
-    "red" : 0.2980392157
-  },
-  "id" : "24670896-9CE6-40DD-86CB-111B3E0DEB8D",
-  "shadowOpacity" : 0,
-  "shadowHeight" : 0.3
+  "shadowOpacity" : 0
 }
