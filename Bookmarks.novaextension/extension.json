@@ -1,9 +1,14 @@
 {
+    "bugs": "https://github.com/gingerbeardman/Bookmarks/issues",
+    "description": "Bookmark files in the Sidebar for easier management",
+    "funding": "https://ko-fi.com/gingerbeardman",
+    "homepage": "https://www.gingerbeardman.com",
     "identifier": "com.gingerbeardman.Bookmarks",
     "name": "Bookmarks",
     "organization": "gingerbeardman",
-    "description": "Bookmark files and folders in the Sidebar.",
+    "repository": "https://github.com/gingerbeardman/Bookmarks",
     "version": "1.0.0",
+
     "categories": ["sidebars"],
     
     "main": "main.js",
@@ -31,7 +36,7 @@
                     "name": "Bookmarks",
                     "allowMultiple": true,
                     "placeholderText": "No bookmarks have been created.",
-                    "placeholderImage": "sidebar-placeholder",
+                    "placeholderImage": "sidebar-large",
                     "headerCommands": [
                         {
                             "title": "Add",
