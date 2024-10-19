@@ -1,13 +1,13 @@
 {
     "bugs": "https://github.com/gingerbeardman/Bookmarks/issues",
-    "description": "Bookmark files in the Sidebar for easier management",
+    "description": "Bookmark files in a Sidebar for easier management",
     "funding": "https://ko-fi.com/gingerbeardman",
     "homepage": "https://www.gingerbeardman.com",
     "identifier": "com.gingerbeardman.Bookmarks",
     "name": "Bookmarks",
     "organization": "gingerbeardman",
     "repository": "https://github.com/gingerbeardman/Bookmarks",
-    "version": "1.0.0",
+    "version": "1.0.1",
 
     "categories": ["sidebars"],
     

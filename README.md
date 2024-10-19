@@ -2,7 +2,7 @@
 
 Bookmarks is an extension for the [Nova editor](https://nova.app).
 
-Bookmark files in the Sidebar for easier management.
+Bookmark files in a Sidebar for easier management.
 
 See the internal [README](/Bookmarks.novaextension/README.md) for more info.
 
