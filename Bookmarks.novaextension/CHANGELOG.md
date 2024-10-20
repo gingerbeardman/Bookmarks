@@ -1,3 +1,7 @@
+## Version 1.1.1
+
+Change: improved README
+
 ## Version 1.1.0
 
 Add: commands to add/remove bookmark for the current file

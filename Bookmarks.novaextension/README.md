@@ -16,11 +16,13 @@ For more frequent access you can drag the **Bookmarks** icon to:
 
 ## Adding/Removing
 
-Use the `+` and `-` icons in the sidebar to add/remove file bookmarks.
+Use the `+` icon in the sidebar to add the current file as a bookmark.
 
-There are also two commands to add/remove the current file.
+Use the `-` icon in the sidebar to remove the currently selected file bookmark.
 
-FInally, you can right click on a bookmark to bring up a context menu with the following options:
+There are also two editor commands to add/remove the current file.
+
+Finally, you can right click on a bookmark to bring up a context menu with the following options:
 
 - Remove
 - Show in Finder
