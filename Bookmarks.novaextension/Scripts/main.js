@@ -13,7 +13,6 @@ class BookmarksDataProvider {
         let name = nova.path.basename(path);
         let item = new TreeItem(name, TreeItemCollapsibleState.None);
         item.path = path;
-        item.command = "com.gingerbeardman.Bookmark.open";
         item.contextValue = "bookmark";
         item.tooltip = path;
         console.log("Created TreeItem:", item);
@@ -69,6 +68,20 @@ exports.activate = function() {
     // Create a new TreeView for bookmarks
     let bookmarksView = new TreeView("com.gingerbeardman.Bookmark.sidebar", {
         dataProvider: new BookmarksDataProvider()
+    });
+
+    // Add single-click open behavior
+    bookmarksView.onDidChangeSelection((selectedItems) => {
+        if (selectedItems && selectedItems.length > 0) {
+            let path = selectedItems[0];
+            console.log("Single-click opening file:", path);
+            try {
+                nova.workspace.openFile(path);
+            } catch (error) {
+                console.error("Error opening file on single click:", error);
+                nova.workspace.showErrorMessage("Failed to open file: " + error.message);
+            }
+        }
     });
 
     // Register commands

@@ -1,3 +1,7 @@
+## Version 1.2.0
+
+Change: single click to open a file
+
 ## Version 1.1.1
 
 Change: improved README
