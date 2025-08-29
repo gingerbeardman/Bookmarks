@@ -1,3 +1,13 @@
+## Version 2.0.0
+
+Add: folders can be bookmarked
+Add: full path displayed in tooltip
+Add: missing files are marked
+Add: refresh to clear missing files/folders
+Add: sort options (default: none, which is the existing behaviour)
+
+----
+
 ## Version 1.2.0
 
 Change: single click to open a file

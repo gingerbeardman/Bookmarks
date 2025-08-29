@@ -7,7 +7,7 @@
     "name": "Bookmarks",
     "organization": "gingerbeardman",
     "repository": "https://github.com/gingerbeardman/Bookmarks",
-    "version": "1.2.0",
+    "version": "2.0.0",
 
     "categories": ["sidebars"],
     
@@ -21,6 +21,17 @@
         "filesystem": "readonly",
         "process": true
     },
+    
+    "config": [
+        {
+            "key": "com.gingerbeardman.Bookmarks.defaultSort",
+            "title": "Default Sort Order",
+            "description": "Choose the default sorting order for bookmarks",
+            "type": "enum",
+            "values": ["none", "alphabetical", "recent"],
+            "default": "none"
+        }
+    ],
     
     "sidebars": [
         {
@@ -50,6 +61,18 @@
                             "tooltip": "Remove the selected bookmarks",
                             "command": "com.gingerbeardman.Bookmark.remove",
                             "when": "viewItem != null"
+                        },
+                        {
+                            "title": "Refresh",
+                            "image": "__builtin.refresh",
+                            "tooltip": "Remove bookmarks for files that no longer exist",
+                            "command": "com.gingerbeardman.Bookmark.cleanupMissing"
+                        },
+                        {
+                            "title": "Sort",
+                            "image": "__builtin.sort",
+                            "tooltip": "Sort bookmarks",
+                            "command": "com.gingerbeardman.Bookmark.sort"
                         }
                     ],
                     "contextCommands": [
@@ -59,7 +82,7 @@
                             "when": "viewItem != null"
                         },
                         {
-                            "title": "Show in Finder",
+                            "title": "Reveal in Finder",
                             "command": "com.gingerbeardman.Bookmark.showInFinder",
                             "when": "viewItem != null"
                         }
@@ -80,6 +103,10 @@
                 "title": "Remove Bookmark",
                 "command": "com.gingerbeardman.Bookmark.removeByFilename",
                 "shortcut": "cmd-shift-alt-b"
+            },
+            {
+                "title": "Add Folder Bookmark",
+                "command": "com.gingerbeardman.Bookmark.addFolder"
             }
         ]
     }
