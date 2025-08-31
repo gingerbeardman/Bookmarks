@@ -82,7 +82,7 @@
                             "when": "viewItem != null"
                         },
                         {
-                            "title": "Reveal in Finder",
+                            "title": "Show in Finder",
                             "command": "com.gingerbeardman.Bookmark.showInFinder",
                             "when": "viewItem != null"
                         }

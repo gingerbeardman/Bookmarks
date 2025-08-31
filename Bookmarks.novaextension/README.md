@@ -25,13 +25,13 @@ There are also two editor commands to add/remove the current file.
 Finally, you can right click on a bookmark to bring up a context menu with the following options:
 
 - Remove
-- Reveal in Finder
+- Show in Finder
 
 ## Folders
 
 You can use an editor command to "Add Folder Bookmark".
 
-> Due to Nova limitations folders cannot be opened in Nova, so clicking a folder does Open in Finder (not the same as Reveal in Finder).
+> Due to Nova limitations folders cannot be opened in Nova, so clicking a folder does Open in Finder (not the same as Show in Finder).
 
 ## Missing
 

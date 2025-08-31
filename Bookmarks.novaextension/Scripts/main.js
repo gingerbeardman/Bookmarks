@@ -262,25 +262,25 @@ exports.activate = function() {
     });
 
     nova.commands.register("com.gingerbeardman.Bookmark.showInFinder", (workspace) => {
-        console.log("Reveal in Finder command triggered");
+        console.log("Show in Finder command triggered");
         let selectedItems = bookmarksView.selection;
         if (selectedItems && selectedItems.length > 0) {
             let path = selectedItems[0];
-            console.log("Attempting to reveal in Finder:", path);
+            console.log("Attempting to Show in Finder:", path);
             try {
                 // Check if the path exists
                 if (nova.fs.access(path, nova.fs.F_OK)) {
-                    // Use the 'open' command to reveal in Finder
+                    // Use the 'open' command to Show in Finder
                     let process = new Process("/usr/bin/open", {
                         args: ["-R", path]
                     });
                     
                     process.onDidExit((status) => {
                         if (status === 0) {
-                            console.log("Successfully revealed in Finder:", path);
+                            console.log("Successfully Showed in Finder:", path);
                         } else {
-                            console.error("Failed to reveal in Finder. Exit status:", status);
-                            nova.workspace.showErrorMessage("Failed to reveal in Finder. Please check the path.");
+                            console.error("Failed to Show in Finder. Exit status:", status);
+                            nova.workspace.showErrorMessage("Failed to Show in Finder. Please check the path.");
                         }
                     });
                     
@@ -289,12 +289,12 @@ exports.activate = function() {
                     throw new Error("Path does not exist");
                 }
             } catch (error) {
-                console.error("Error revealing in Finder:", error);
-                // nova.workspace.showErrorMessage("Failed to reveal in Finder: " + error.message);
+                console.error("Error Showing in Finder:", error);
+                // nova.workspace.showErrorMessage("Failed to Show in Finder: " + error.message);
             }
         } else {
-            console.log("No item selected to show in Finder");
-            // nova.workspace.showInformativeMessage("Please select a bookmark to reveal in Finder.");
+            console.log("No item selected to Show in Finder");
+            // nova.workspace.showInformativeMessage("Please select a bookmark to Show in Finder.");
         }
     });
 
