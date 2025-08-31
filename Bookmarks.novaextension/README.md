@@ -31,7 +31,7 @@ Finally, you can right click on a bookmark to bring up a context menu with the f
 
 You can use an editor command to "Add Folder Bookmark".
 
-> Due to Nova limitations folders cannot be opened in Nova, so clicking a folder does Open in Finder (not the same as Show in Finder).
+> Due to Nova limitations clicking on a folder reveals it in the Files sidebar with automation using AppleScript.
 
 ## Missing
 
