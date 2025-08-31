@@ -1,3 +1,8 @@
+## Version 2.2.0
+
+- Change: bookmarked subfolders can be focussed in Files sidebar  
+- Change: absolute paths are migrated to relative paths
+
 ## Version 2.1.0
 
 - Add: bookmarked folders can be focussed in Files sidebar  

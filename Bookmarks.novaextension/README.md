@@ -1,4 +1,4 @@
-**Bookmarks** provides sidebar integration with the ability to bookmark files.
+**Bookmarks** provides sidebar integration with the ability to bookmark files and folders.
 
 Ideal if the Files Sidebar is too much, or you want a simpler view of the files you are working on.
 
@@ -31,7 +31,7 @@ Finally, you can right click on a bookmark to bring up a context menu with the f
 
 You can use an editor command to "Add Folder Bookmark".
 
-> Due to Nova limitations clicking on a folder reveals it in the Files sidebar with automation using AppleScript.
+> Due to Nova limitations clicking on a folder uses AppleScript automation to focus it in the Files sidebar.
 
 ## Missing
 
